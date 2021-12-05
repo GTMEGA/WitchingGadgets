@@ -58,16 +58,16 @@ public class WGCoreTransformer implements IClassTransformer
 		if (className.equals("thaumcraft.common.lib.world.WorldGenHilltopStones"))
 			return patchThaumcraftWorldgen(origCode, isDeobfEnvironment, "HilltopStones");
 
-		if(className.equals(isDeobfEnvironment?"net.minecraft.enchantment.EnchantmentHelper":"afv"))
-		{
-			byte[] newCode = patchGetFortuneModifier(origCode, isDeobfEnvironment);
-			return newCode;
-		}
-		if(className.equals(isDeobfEnvironment?"net.minecraft.entity.EntityLivingBase":"sv"))
-		{
-			byte[] newCode = patchOnNewPotionEffect(origCode, isDeobfEnvironment);
-			return newCode;
-		}
+		//if(className.equals(isDeobfEnvironment?"net.minecraft.enchantment.EnchantmentHelper":"afv"))
+		//{
+		//	byte[] newCode = patchGetFortuneModifier(origCode, isDeobfEnvironment);
+		//	return newCode;
+		//}
+		//if(className.equals(isDeobfEnvironment?"net.minecraft.entity.EntityLivingBase":"sv"))
+		//{
+		//	byte[] newCode = patchOnNewPotionEffect(origCode, isDeobfEnvironment);
+		//	return newCode;
+		//}
 
 		return origCode;
 	}
