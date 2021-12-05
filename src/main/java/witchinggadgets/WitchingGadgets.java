@@ -1,19 +1,24 @@
 package witchinggadgets;
 
+import cpw.mods.fml.common.FMLCommonHandler;
+import cpw.mods.fml.common.Mod;
+import cpw.mods.fml.common.Mod.Instance;
+import cpw.mods.fml.common.SidedProxy;
+import cpw.mods.fml.common.event.*;
+import cpw.mods.fml.common.event.FMLMissingMappingsEvent.MissingMapping;
+import cpw.mods.fml.common.network.NetworkRegistry;
+import cpw.mods.fml.common.network.simpleimpl.SimpleNetworkWrapper;
+import cpw.mods.fml.common.registry.GameRegistry.Type;
+import cpw.mods.fml.common.registry.VillagerRegistry;
+import cpw.mods.fml.relauncher.Side;
 import net.minecraft.block.Block;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
-import net.minecraft.item.ItemStack;
 import net.minecraft.world.gen.structure.MapGenStructureIO;
 import net.minecraftforge.common.MinecraftForge;
-
-import java.lang.reflect.Field;
-import java.util.ArrayList;
-
 import org.apache.logging.log4j.Level;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-
 import witchinggadgets.common.CommonProxy;
 import witchinggadgets.common.WGConfig;
 import witchinggadgets.common.WGContent;
@@ -26,27 +31,11 @@ import witchinggadgets.common.util.network.message.MessageClientNotifier;
 import witchinggadgets.common.util.network.message.MessagePlaySound;
 import witchinggadgets.common.util.network.message.MessagePrimordialGlove;
 import witchinggadgets.common.util.network.message.MessageTileUpdate;
-import witchinggadgets.common.util.recipe.InfernalBlastfurnaceRecipe;
 import witchinggadgets.common.world.VillageComponentPhotoshop;
-import cpw.mods.fml.common.FMLCommonHandler;
-import cpw.mods.fml.common.Mod;
-import cpw.mods.fml.common.Mod.Instance;
-import cpw.mods.fml.common.SidedProxy;
-import cpw.mods.fml.common.event.FMLInitializationEvent;
-import cpw.mods.fml.common.event.FMLLoadCompleteEvent;
-import cpw.mods.fml.common.event.FMLMissingMappingsEvent;
-import cpw.mods.fml.common.event.FMLMissingMappingsEvent.MissingMapping;
-import cpw.mods.fml.common.event.FMLPostInitializationEvent;
-import cpw.mods.fml.common.event.FMLPreInitializationEvent;
-import cpw.mods.fml.common.network.NetworkRegistry;
-import cpw.mods.fml.common.network.simpleimpl.SimpleNetworkWrapper;
-import cpw.mods.fml.common.registry.GameRegistry.Type;
-import cpw.mods.fml.common.registry.VillagerRegistry;
-import cpw.mods.fml.relauncher.Side;
-import gregtech.api.enums.GT_Values;
-import gregtech.api.util.GT_Recipe;
 
-@Mod(modid = WitchingGadgets.MODID, name = WitchingGadgets.MODNAME, version = WitchingGadgets.VERSION, 
+import static witchinggadgets.Tags.*;
+
+@Mod(modid = MODID, name = MODNAME, version = VERSION,
 			dependencies=
 					  "required-after:Thaumcraft;"
 					+ "required-after:ForbiddenMagic;"
@@ -65,10 +54,6 @@ import gregtech.api.util.GT_Recipe;
 
 public class WitchingGadgets
 {
-	public static final String MODID = "WitchingGadgets";
-	public static final String MODNAME = "Witching Gadgets";
-	public static final String VERSION = "${version}";
-
 	public PlayerTickHandler playerTickHandler;
 
 	public WGWandManager wgWandManager = new WGWandManager();
@@ -78,9 +63,9 @@ public class WitchingGadgets
 	public EventHandler eventHandler;
 
 	@Instance("WitchingGadgets")
-	public static WitchingGadgets instance = new WitchingGadgets();	
+	public static WitchingGadgets instance = new WitchingGadgets();
 
-	@SidedProxy(clientSide="witchinggadgets.client.ClientProxy", serverSide="witchinggadgets.common.CommonProxy")
+	@SidedProxy(clientSide = GROUPNAME + ".client.ClientProxy", serverSide = GROUPNAME + ".common.CommonProxy")
 	public static CommonProxy proxy;
 
 	public static SimpleNetworkWrapper packetHandler;

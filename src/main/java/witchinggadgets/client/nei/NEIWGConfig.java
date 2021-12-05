@@ -9,6 +9,8 @@ import witchinggadgets.common.items.ItemClusters;
 import codechicken.nei.api.API;
 import codechicken.nei.api.IConfigureNEI;
 
+import static witchinggadgets.Tags.VERSION;
+
 public class NEIWGConfig implements IConfigureNEI
 {
 	@Override
@@ -35,6 +37,6 @@ public class NEIWGConfig implements IConfigureNEI
 	@Override
 	public String getVersion()
 	{
-		return WitchingGadgets.VERSION;
+		return VERSION;
 	}
 }

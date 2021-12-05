@@ -5,11 +5,12 @@ import org.apache.logging.log4j.Logger;
 
 import witchinggadgets.WitchingGadgets;
 
+import static witchinggadgets.Tags.MODID;
 
 
 public final class Log {
 
-  public static final Logger LOGGER = LogManager.getLogger(WitchingGadgets.MODID);
+  public static final Logger LOGGER = LogManager.getLogger(MODID);
 
   public static void warn(String msg) {
     LOGGER.warn(msg);

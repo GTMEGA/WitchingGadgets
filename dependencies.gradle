@@ -1,0 +1,27 @@
+// Add your dependencies here
+
+dependencies {
+    compile ("com.azanor.baubles:Baubles:1.7.10-1.0.1.10:deobf")
+    compile ("thaumcraft:Thaumcraft:1.7.10-4.2.3.5:dev")
+
+    compile ("twilightforest:twilightforest:1.7.10-2.3.8dev:dev")
+
+    compile("com.github.GTNewHorizons:NotEnoughItems:master-SNAPSHOT:dev")
+    compileOnly("com.github.GTNewHorizons:waila:master-SNAPSHOT:dev") {
+        transitive = false
+    }
+    compileOnly("com.github.GTNewHorizons:ForgeMultipart:master-SNAPSHOT:dev") {
+        transitive = false
+    }
+
+    compile("eu.usrv:YAMCore:1.7.10+:deobf")
+    compile("net.sengir.forestry:forestry_1.7.10:4.2.16.64:dev")
+    compile("mantle:Mantle:1.7.10+:deobf")
+    compile("mods.railcraft:Railcraft_1.7.10:9.12.3.0:dev")
+
+    compileOnly("vazkii.botania:Botania:r1.8-250:deobf")
+    compileOnly("minetweaker:MineTweaker3:1.7.10-3.0.10:dev-full")
+
+    compileOnly fileTree("lib/compileOnly")
+    compile fileTree("lib/compile")
+}
