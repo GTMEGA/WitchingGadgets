@@ -45,6 +45,7 @@ import static witchinggadgets.Tags.*;
 					+ "required-after:MagicBees;"
 					+ "required-after:dreamcraft;"
 					+ "required-after:TaintedMagic;"
+					+ "required-after:spongemixins@[1.1.0,);"
 					+ "after:miscutils;"
 					+ "after:Mystcraft;"
 					+ "after:TConstruct;"

@@ -15,24 +15,8 @@ public enum Mixin {
     // Exception: Tags.java, as long as it is used for Strings only!
     //
 
-    BlockCactusMixin("minecraft.BlockCactusMixin", VANILLA),
-    //BlockCakeMixin("minecraft.BlockCakeMixin", VANILLA),
-    //BlockCocoaMixin("minecraft.BlockCocoaMixin", VANILLA),
-    //BlockCropsMixin("minecraft.BlockCropsMixin", VANILLA),
-    //BlockMushroomMixin("minecraft.BlockMushroomMixin", VANILLA),
-    //BlockNetherWartMixin("minecraft.BlockNetherWartMixin", VANILLA),
-    //BlockReedMixin("minecraft.BlockReedMixin", VANILLA),
-    //BlockSaplingMixin("minecraft.BlockSaplingMixin", VANILLA),
-    //BlockStemMixin("minecraft.BlockStemMixin", VANILLA),
-    //EntityPlayerMixin("minecraft.EntityPlayerMixin", VANILLA),
-    //FoodStatsMixin("minecraft.FoodStatsMixin", VANILLA),
-    //GuiScreenMixin("minecraft.GuiScreenMixin", Side.CLIENT, VANILLA),
-    //ItemRendererMixin("minecraft.ItemRendererMixin", Side.CLIENT, VANILLA),
-    //GuiDrawMixin("codechickenlib.GuiDrawMixin", Side.CLIENT, CODECHICKEN_LIB),
-    //BlockPamFruitMixin("harvestcraft.BlockPamFruitMixin", HARVESTCRAFT),
-    //BlockPamSaplingMixin("harvestcraft.BlockPamSaplingMixin", HARVESTCRAFT),
-    //BerryBushMixin("natura.BerryBushMixin", NATURA),
-    //NetherBerryBushMixin("natura.NetherBerryBushMixin", NATURA)
+    EnchantmentHelperMixin("minecraft.EnchantmentHelperMixin", VANILLA),
+    // EntityLivingBaseMixin("minecraft.EntityLivingBaseMixin", VANILLA),
 
     ;
 
