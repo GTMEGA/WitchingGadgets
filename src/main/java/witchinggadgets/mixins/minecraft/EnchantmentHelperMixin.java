@@ -29,7 +29,7 @@ public abstract class EnchantmentHelperMixin {
     @Inject(method = {"getLootingModifier(Lnet/minecraft/entity/EntityLivingBase;)I",
             "getFortuneModifier(Lnet/minecraft/entity/EntityLivingBase;)I"},
             at = @At(value = "HEAD"),
-            require = 1)
+            require = 2)
     private static void getFortruneOrLootingModifierHead(EntityLivingBase entityLivingBase,
                                                          CallbackInfoReturnable<Integer> cir) {
         if (coremod_allowEnchantModifications && entityLivingBase instanceof EntityPlayer)

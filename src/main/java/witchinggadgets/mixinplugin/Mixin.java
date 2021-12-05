@@ -15,7 +15,7 @@ public enum Mixin {
     // Exception: Tags.java, as long as it is used for Strings only!
     //
 
-    EnchantmentHelperMixin("minecraft.EnchantmentHelperMixin", VANILLA),
+    //EnchantmentHelperMixin("minecraft.EnchantmentHelperMixin", VANILLA),
     // EntityLivingBaseMixin("minecraft.EntityLivingBaseMixin", VANILLA),
 
     ;
